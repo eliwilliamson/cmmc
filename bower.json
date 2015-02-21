@@ -1,0 +1,14 @@
+{
+  "name": "cmmc",
+  "version": "0.0.0",
+  "dependencies": {
+    "normalize-css": "~3.0.2",
+    "bourbon": "3.2.3",
+    "neat": "1.5.1",
+    "modernizr": "~2.8.3",
+    "jquery": "~1.11.1",
+    "selectivizr": "~1.0.2",
+    "respond": "~1.4.2"
+  },
+  "devDependencies": {}
+}
