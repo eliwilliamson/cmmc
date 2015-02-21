@@ -1,0 +1,47 @@
+.yamm {
+
+  .nav.navbar-nav {
+    @media (min-width: 1025px) {
+      float: right;
+    }
+
+    .btn.btn-large {
+      @media (min-width: 1025px) {
+        margin: 0 0 0 20px;
+      }
+      @media (max-width: 1024px) {
+        border-radius: 4px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .navbar-nav .dropdown:last-child {
+    @media (max-width: 1024px) {
+      border-top: none;
+    }
+  }
+
+  .stuck {
+    .nav.navbar-nav .btn.btn-large {
+      border-radius: 0;
+    }
+  }
+
+  .navbar-brand img {
+    max-height: 50px;
+  }
+
+  .navbar-collapse.collapse.stuck .navbar-brand img {
+    max-height: 35px;
+  }
+
+  .nav > li > a {
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        border-color: transparent;
+        color: lighten(#9c954a, 10);
+    }
+  }
+}

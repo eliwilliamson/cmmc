@@ -1,0 +1,29 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    {% if page.url == "/404.html" %}
+      <meta http-equiv="refresh" content="5; url=/">
+    {% endif %}
+
+    {% include shared/styles.html %}
+
+    {% include shared/google-analytics.html %}
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,900,300,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>

@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-  {% include head.html %}
+  {% include shared/head.html %}
 
     <body id="page-top" class="{{ page.body_class }}">
+
+      {% include shared/header.html %}
 
       <main class="content-primary">
           {{ content }}
       </main>
 
-      {% include shared/scripts.html %}
+      {% include shared/footer.html %}
 
-      {% include js.html %}
+      {% include shared/scripts.html %}
 
     </body>
 </html>
