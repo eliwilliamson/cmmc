@@ -23,4 +23,22 @@
       color: #117156;
     }
   }
+
+  .clients {
+    overflow: hidden;
+    padding: 40px;
+  }
+
+  .count {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1em;
+    margin-bottom: 0;
+  }
+
+  .count-label {
+    font-size: .5em;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+  }
 }

@@ -49,7 +49,7 @@ iframe {
 body {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #283645;
-    color: #73879C;
+    color: #999999;
     font-size: 18px;
 	line-height: 150%;
     -webkit-font-smoothing: antialiased;
@@ -74,7 +74,7 @@ p {
 	margin-bottom: 20px;
 }
 p a {
-	border-bottom: 1px solid #73879C;
+	border-bottom: 1px solid #999999;
 }
 p a:hover {
 	border-color: transparent;
@@ -736,7 +736,7 @@ figure.post-media + * {
 	background: #F2F5F7;
 }
 .dark-bg .sidelines {
-	border-color: #73879C;
+	border-color: #999999;
 }
 .dark-bg .sidelines span {
 	background: #2F4052;
@@ -1066,7 +1066,7 @@ footer p {
 }
 .dark-bg .bordered .info p,
 .tint-bg .bordered .info p {
-	color: #73879C;
+	color: #999999;
 }
 .no-top-border {
     border-top: none;
@@ -1184,7 +1184,7 @@ footer p {
 .dark-bg .border-left-sm,
 .dark-bg .border-left-xs,
 .dark-bg .border-left {
-	border-color: #73879C;
+	border-color: #999999;
 }
 .tint-bg .border,
 .tint-bg .border-lg,
@@ -1430,7 +1430,7 @@ aside .thumb figure {
 .navbar .dropdown-menu:not(.yamm-dropdown-menu) li a {
 	line-height: 18px;
   padding: 13px 20px;
-  color: #73879C;
+  color: #999999;
   text-transform: uppercase;
   font-weight: 700;
 	white-space: normal;
@@ -1477,7 +1477,7 @@ aside .thumb figure {
 }
 .navbar-header .info li a {
     font-size: 12px;
-    color: #73879C;
+    color: #999999;
 }
 .navbar-header .info a:hover {
     color: #9c954a;
@@ -2407,7 +2407,7 @@ blockquote:before {
 	background: #F2F5F7;
 }
 .dark-bg .filter:before {
-	border-color: #73879C;
+	border-color: #999999;
 }
 .dark-bg .filter li {
 	background: #2F4052;
@@ -3111,7 +3111,7 @@ input[type="color"],
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 25px;
-    color: #73879C;
+    color: #999999;
     resize: none;
     vertical-align: middle;
     -webkit-box-shadow: none;
@@ -3982,7 +3982,7 @@ input:focus:-ms-input-placeholder {
     text-align: center;
 }
 .retina-icons-code code {
-    color: #73879C;
+    color: #999999;
     background: none;
 }
 .table-bordered {

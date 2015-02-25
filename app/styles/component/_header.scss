@@ -28,14 +28,6 @@
     }
   }
 
-  .navbar-brand img {
-    max-height: 50px;
-  }
-
-  .navbar-collapse.collapse.stuck .navbar-brand img {
-    max-height: 35px;
-  }
-
   .nav > li > a {
     &:hover,
     &:focus {
