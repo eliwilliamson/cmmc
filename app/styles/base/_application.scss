@@ -26,3 +26,15 @@
   margin-top: 0;
   padding: 12px 24px;
 }
+
+.footer-bottom {
+  background-color: darken(#117156, 10) !important;
+
+  p, ul, li, a {
+    color: #117156 !important;
+  }
+
+  a:hover {
+    color: lighten(#117156, 10) !important;
+  }
+}
