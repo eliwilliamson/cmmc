@@ -2588,7 +2588,7 @@ blockquote:before {
 	height: 30px;
 	font-size: 30px;
 	color: #FFF;
-	background-color: #777777;
+	background-color: #9c954a;
 	border: none;
 	-webkit-border-radius: 3px;
 	   -moz-border-radius: 3px;
@@ -2616,7 +2616,7 @@ blockquote:before {
 }
 .owl-carousel:hover .owl-prev:hover,
 .owl-carousel:hover .owl-next:hover {
-    color: #9c954a;
+    color: #fff;
 	opacity: 1;
 }
 .owl-outer-nav:after {
@@ -3950,7 +3950,7 @@ input:focus:-ms-input-placeholder {
 	font-size: 36px;
 	line-height: 100%;
 	color: #FFF;
-	background-color: #777777;
+	background-color: #9c954a;
 	padding: 3px;
 	-webkit-border-radius: 3px;
 	   -moz-border-radius: 3px;
@@ -3958,7 +3958,7 @@ input:focus:-ms-input-placeholder {
 	opacity: .5;
 }
 #scrollUp:hover {
-	color: #9c954a;
+	color: #fff;
 	opacity: 1;
 }
 
