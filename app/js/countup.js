@@ -1,6 +1,8 @@
 $(function() {
 
-  homeCountUp();
+  if ($('body').hasClass('index')) {
+    homeCountUp();
+  }
 
   function homeCountUp() {
     var COUNTUP_SPEED     = 30,

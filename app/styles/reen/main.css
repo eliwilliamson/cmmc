@@ -2175,6 +2175,26 @@ blockquote:before {
 .items:after {
     clear: both
 }
+.isotope-item .bordered {
+  -webkit-transition: border-width 100ms linear;
+  -moz-transition: border-width 100ms linear;
+  -ms-transition: border-width 100ms linear;
+  -o-transition: border-width 100ms linear;
+  transition: border-width 100ms linear;
+}
+.isotope-item:hover .bordered{
+  border-bottom-width: 4px;
+}
+.isotope-item figure {
+  -webkit-transition: margin 100ms linear;
+  -moz-transition: margin 100ms linear;
+  -ms-transition: margin 100ms linear;
+  -o-transition: margin 100ms linear;
+  transition: margin 100ms linear;
+}
+.isotope-item:hover figure {
+  margin-top: -2px;
+}
 .items li {
     float: left;
     min-height: 1px;
@@ -2211,36 +2231,12 @@ blockquote:before {
     font-size: 16px;
     margin-bottom: 3px;
 }
-.items.fullscreen {
-    width: 100%;
-    clear: both;
-	margin: 0 0 -1px 0;
-    padding: 0;
-    list-style: none;
-}
-.items.fullscreen li {
-    float: left;
-    position: relative;
-    background: none;
-    padding: 0;
-	width: 16.666666666%;
-}
-.items.fullscreen li img {
-    display: block;
-    /*position: relative;*/
-    width: 100%;
-    height: auto;
-}
-.items.fullscreen:after {
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
 .items li img {
     display: block;
     width: 100%;
+    border: 1px solid #E6E9ED;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 .items li,
 .items li img,
@@ -2250,7 +2246,7 @@ blockquote:before {
     position: relative;
 }
 .items li {
-    overflow: hidden;
+    overflow: visible;
 }
 .items li .text-overlay,
 .thumbs .thumb .text-overlay,
@@ -2400,6 +2396,11 @@ blockquote:before {
 .format-filter li a {
     padding: 0 15px;
 }
+
+.filter li a.active,
+.format-filter li a.active {
+    color: #117156;
+}
 .light-bg .filter:before {
 	border-color: #BCC7D1;
 }
@@ -2421,6 +2422,7 @@ blockquote:before {
 	        transition-duration: 600ms;
 }
 .isotope {
+  overflow: visible !important;
 	-webkit-transition-property: height, width;
 	   -moz-transition-property: height, width;
 	    -ms-transition-property: height, width;
