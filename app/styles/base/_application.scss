@@ -38,3 +38,14 @@
     color: lighten(#117156, 10) !important;
   }
 }
+
+// Google maps bug fix
+.gm-style-iw > div:first-child {
+  overflow: visible !important;
+  width: auto !important;
+
+  & > div:first-child {
+    overflow: visible !important;
+    width: auto !important;
+  }
+}
