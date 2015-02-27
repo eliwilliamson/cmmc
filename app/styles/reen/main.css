@@ -39,12 +39,12 @@ iframe {
 	margin-bottom: 0 !important;
 }
 ::selection {
-    background: #AAF2E4; /* Safari */
-    color: #777777;
+    background: #9c954a; /* Safari */
+    color: white;
 }
 ::-moz-selection {
-    background: #AAF2E4; /* Firefox */
-    color: #777777;
+    background: #9c954a; /* Firefox */
+    color: white;
 }
 body {
     font-family: 'Source Sans Pro', sans-serif;

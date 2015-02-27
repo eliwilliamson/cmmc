@@ -1,0 +1,29 @@
+.suppliers {
+
+  #hero {
+    background: url('/images/suppliers-hero.jpg') no-repeat center;
+    background-size: cover;
+
+    &.tint-bg.img-bg-soft:before {
+      background-color: #117156;
+    }
+
+    h1 {
+      text-transform: initial;
+      max-width: 600px;
+    }
+  }
+
+  p {
+    margin-left: 1.5em;
+  }
+
+  .contacts {
+    margin-bottom: 3em;
+  }
+
+  .icon-location {
+    float: left;
+    margin-top: 0.3em;
+  }
+}
