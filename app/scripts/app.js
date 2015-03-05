@@ -573,213 +573,378 @@ $(document).ready(function () {
 
 
 /*===================================================================================*/
-/*  GOOGLE MAPS
+/*  GOOGLE MAPS SUPPLIERS
 /*===================================================================================*/
 
-// $(document).ready(function () {
-
-//   function initialize() {
-//     var mapOptions = {
-//       zoom: 2,
-//       center: new google.maps.LatLng(37.3333046, -97.5093944),
-//       disableDefaultUI: true,
-//       scrollwheel: false
-//     }
-//     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-//   }
-
-//   google.maps.event.addDomListener(window, 'load', initialize);
-
-// });
-
 $(document).ready(function () {
-  var locations = [
-    ['Bookcliff Sales, Inc', 39.598486, -110.812576, 1],
-    ['Bookcliff Sales, Inc', 41.57222, -109.270449, 2],
-    ['Champion Mine Supply, Inc', 40.023773, -79.352234, 3],
-    ['Cincinnati Mine AU', -27.328516, 152.92387, 4],
-    ['Cincinnati Mine WV', 37.967802, -82.0185913, 5],
-    ['Cincinnati Mine SA (Cincinnati Chain and Supply)', -25.9054739, 29.2304855, 6],
-    ['Sumiton Mine Supply', 33.7315537, -87.0396025, 7],
-    ['Woodruff Supply Co.', 37.33329, -87.5093969, 8],
-    ['Woodruff Supply Co.', 38.00915730000001, -88.91738199999999, 9],
-    ['Parts Service and Supply', 28.5232921, -100.3113873, 10],
-    ['Apex Machine Works, LTD', 46.0901064, -64.8067903, 11],
-    ['Bit Service Co. LTD.', 52.16460499999999, -106.6563648, 12],
-    ['Bit Service Co. LTD.', 50.6495932, -102.0776302, 13]
-  ];
+  if ($('body').hasClass('suppliers')) {
+    var locations = [
+      ['Bookcliff Sales, Inc', 39.598486, -110.812576, 1],
+      ['Bookcliff Sales, Inc', 41.57222, -109.270449, 2],
+      ['Champion Mine Supply, Inc', 40.023773, -79.352234, 3],
+      ['Cincinnati Mine AU', -27.328516, 152.92387, 4],
+      ['Cincinnati Mine WV', 37.967802, -82.0185913, 5],
+      ['Cincinnati Mine SA (Cincinnati Chain and Supply)', -25.9054739, 29.2304855, 6],
+      ['Sumiton Mine Supply', 33.7315537, -87.0396025, 7],
+      ['Woodruff Supply Co.', 37.33329, -87.5093969, 8],
+      ['Woodruff Supply Co.', 38.00915730000001, -88.91738199999999, 9],
+      ['Parts Service and Supply', 28.5232921, -100.3113873, 10],
+      ['Apex Machine Works, LTD', 46.0901064, -64.8067903, 11],
+      ['Bit Service Co. LTD.', 52.16460499999999, -106.6563648, 12],
+      ['Bit Service Co. LTD.', 50.6495932, -102.0776302, 13]
+    ];
 
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 2,
-    center: new google.maps.LatLng(17.3333046, -97.5093944),
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    disableDefaultUI: true,
-    scrollwheel: false,
-    styles: [
-    {
-        "featureType": "all",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "saturation": "-44"
-            },
-            {
-                "gamma": "10.00"
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#117156"
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "lightness": "-19"
-            },
-            {
-                "gamma": "2.14"
-            },
-            {
-                "saturation": "-41"
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "gamma": 0.01
-            },
-            {
-                "lightness": 20
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "saturation": -31
-            },
-            {
-                "lightness": -33
-            },
-            {
-                "weight": 2
-            },
-            {
-                "gamma": 0.8
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "lightness": 30
-            },
-            {
-                "saturation": 30
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "saturation": 20
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "lightness": 20
-            },
-            {
-                "saturation": -20
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "lightness": 10
-            },
-            {
-                "saturation": -30
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "saturation": 25
-            },
-            {
-                "lightness": 25
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "lightness": -20
-            }
-        ]
-    }
-]
-  });
-
-  var infowindow = new google.maps.InfoWindow();
-
-  var marker, i;
-
-  for (i = 0; i < locations.length; i++) {
-    marker = new google.maps.Marker({
-      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-      map: map,
-      icon: '/images/pin.png'
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 2,
+      center: new google.maps.LatLng(17.3333046, -97.5093944),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      disableDefaultUI: true,
+      scrollwheel: false,
+      styles: [
+      {
+          "featureType": "all",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "simplified"
+              },
+              {
+                  "saturation": "-44"
+              },
+              {
+                  "gamma": "10.00"
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "color": "#117156"
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "geometry.fill",
+          "stylers": [
+              {
+                  "lightness": "-19"
+              },
+              {
+                  "gamma": "2.14"
+              },
+              {
+                  "saturation": "-41"
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "labels.text.fill",
+          "stylers": [
+              {
+                  "gamma": 0.01
+              },
+              {
+                  "lightness": 20
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+              {
+                  "saturation": -31
+              },
+              {
+                  "lightness": -33
+              },
+              {
+                  "weight": 2
+              },
+              {
+                  "gamma": 0.8
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "labels.icon",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "landscape",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "lightness": 30
+              },
+              {
+                  "saturation": 30
+              }
+          ]
+      },
+      {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "saturation": 20
+              }
+          ]
+      },
+      {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "lightness": 20
+              },
+              {
+                  "saturation": -20
+              }
+          ]
+      },
+      {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "lightness": 10
+              },
+              {
+                  "saturation": -30
+              }
+          ]
+      },
+      {
+          "featureType": "road",
+          "elementType": "geometry.stroke",
+          "stylers": [
+              {
+                  "saturation": 25
+              },
+              {
+                  "lightness": 25
+              }
+          ]
+      },
+      {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "lightness": -20
+              }
+          ]
+      }
+  ]
     });
 
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-      return function() {
-        infowindow.setContent(locations[i][0]);
-        infowindow.open(map, marker);
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+        icon: '/images/pin.png'
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  }
+});
+
+
+/*===================================================================================*/
+/*  GOOGLE MAPS CONTACT
+/*===================================================================================*/
+
+$(document).ready(function () {
+  if ($('body').hasClass('contact')) {
+    var locations = [
+      ['Cincinnati Mine Machinery Co.', 39.214526, -84.582801, 1]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map-contact'), {
+      zoom: 10,
+      center: new google.maps.LatLng(39.27, -84.582801),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      disableDefaultUI: true,
+      scrollwheel: false,
+      styles: [
+      {
+          "featureType": "all",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "simplified"
+              },
+              {
+                  "saturation": "-44"
+              },
+              {
+                  "gamma": "10.00"
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "color": "#117156"
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "geometry.fill",
+          "stylers": [
+              {
+                  "lightness": "-19"
+              },
+              {
+                  "gamma": "2.14"
+              },
+              {
+                  "saturation": "-41"
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "labels.text.fill",
+          "stylers": [
+              {
+                  "gamma": 0.01
+              },
+              {
+                  "lightness": 20
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+              {
+                  "saturation": -31
+              },
+              {
+                  "lightness": -33
+              },
+              {
+                  "weight": 2
+              },
+              {
+                  "gamma": 0.8
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "labels.icon",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "landscape",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "lightness": 30
+              },
+              {
+                  "saturation": 30
+              }
+          ]
+      },
+      {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "saturation": 20
+              }
+          ]
+      },
+      {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "lightness": 20
+              },
+              {
+                  "saturation": -20
+              }
+          ]
+      },
+      {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "lightness": 10
+              },
+              {
+                  "saturation": -30
+              }
+          ]
+      },
+      {
+          "featureType": "road",
+          "elementType": "geometry.stroke",
+          "stylers": [
+              {
+                  "saturation": 25
+              },
+              {
+                  "lightness": 25
+              }
+          ]
+      },
+      {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "lightness": -20
+              }
+          ]
       }
-    })(marker, i));
+  ]
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+        icon: '/images/pin.png'
+      });
+    }
   }
 });
 

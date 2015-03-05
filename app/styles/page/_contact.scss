@@ -1,0 +1,21 @@
+.contact {
+
+  #map-contact {
+    height: 300px;
+  }
+
+  select.territory {
+    background: #F5F7FA;
+    color: #506A85;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .contact-info {
+    color: white;
+  }
+
+  .thumbs .thumb .text-overlay {
+    background: rgba($green, .9);
+  }
+}

@@ -1,0 +1,53 @@
+<!-- ============================================================= SECTION – CONTACT FORM ============================================================= -->
+
+<div class="col-md-8 inner-right inner-bottom-md">
+
+  <section id="contact-form">
+
+    <h2>Leave a Message</h2>
+
+    <form id="contactform" class="forms" action="contact.php" method="post">
+
+      <div class="row">
+        <div class="col-sm-6">
+          <input type="text" name="name" class="form-control" placeholder="Name (Required)">
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <input type="email" name="email" class="form-control" placeholder="Email (Required)">
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+
+      <div class="row">
+        <div class="col-sm-6">
+          <input type="text" name="subject" class="form-control" placeholder="Subject">
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <select class="territory">
+            <option value="volvo"><span>Eastern KY</span></option>
+            <option value="saab"><span>Virginia</span></option>
+            <option value="mercedes"><span>Western KY</span></option>
+            <option value="audi"><span>Illinois</span></option>
+            <option value="audi"><span>West Virginia</span></option>
+            <option value="audi"><span>Northern WV</span></option>
+            <option value="audi"><span>Ohio</span></option>
+            <option value="audi"><span>Pennsylvania</span></option>
+            <option value="audi"><span>Other</span></option>
+          </select>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+
+      <div class="row">
+        <div class="col-sm-12">
+          <textarea name="message" class="form-control" placeholder="Enter your message ..."></textarea>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+
+      <button type="submit" class="btn btn-default btn-submit btn-large btn-green">Submit message</button>
+
+    </form>
+
+    <div id="response"></div>
+
+  </section>
+
+</div><!-- ./col -->
