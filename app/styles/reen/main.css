@@ -48,7 +48,7 @@ iframe {
 }
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #283645;
+    background-color: #0a4534;
     color: #999999;
     font-size: 18px;
 	line-height: 150%;
@@ -2160,7 +2160,12 @@ blockquote:before {
 /*===================================================================================*/
 /*	PORTFOLIO
 /*===================================================================================*/
-
+.products #get-started .col-sm-11 {
+  opacity: 1 !important;
+}
+.portfolio {
+  overflow: hidden;
+}
 .items {
     list-style: none;
     margin: 0;

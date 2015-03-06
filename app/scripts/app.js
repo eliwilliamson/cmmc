@@ -404,24 +404,6 @@ $(document).ready(function () {
 });
 
 
-// /*===================================================================================*/
-// /*  TABS
-// /*===================================================================================*/
-
-// $(document).ready(function () {
-
-//   /*$('.tabs.tabs-services').easytabs({
-//     cycle: 5000
-//   });*/
-
-//   $('.tabs.tabs-top, .tabs.tabs-circle-top, .tabs.tabs-2-big-top, .tabs.tabs-side').easytabs({
-//     animationSpeed: 200,
-//     updateHash: false
-//   });
-
-// });
-
-
 /*===================================================================================*/
 /*  ACCORDION (FOR ISOTOPE HEIGHT CALCULATION)
 /*===================================================================================*/
@@ -548,28 +530,6 @@ $(document).ready(function() {
 $(document).ready(function () {
   $('.icon-overlay a').prepend('<span class="icn-more"></span>');
 });
-
-
-// /*===================================================================================*/
-// /*  DATA REL
-// /*===================================================================================*/
-
-// $(document).ready(function () {
-//   $('a[data-rel]').each(function () {
-//     $(this).attr('rel', $(this).data('rel'));
-//   });
-// });
-
-
-// /*===================================================================================*/
-// /*  TOOLTIP
-// /*===================================================================================*/
-
-// $(document).ready(function () {
-//   if ($("[rel=tooltip]").length) {
-//     $("[rel=tooltip]").tooltip();
-//   }
-// });
 
 
 /*===================================================================================*/
@@ -957,64 +917,64 @@ $(document).ready(function () {
 });
 
 
-// /*===================================================================================*/
-// /*  FORM VALIDATION
-// /*===================================================================================*/
+/*===================================================================================*/
+/*  FORM VALIDATION
+/*===================================================================================*/
 
-// $(document).ready(function() {
+$(document).ready(function() {
 
-//   $('#contactform, #commentform').validate({
+  $('#contactform, #commentform').validate({
 
-//     errorPlacement: function(error, element) {
-//       $(element).attr({
-//         'placeholder' : error.html()
-//       });
-//     },
+    errorPlacement: function(error, element) {
+      $(element).attr({
+        'placeholder' : error.html()
+      });
+    },
 
-//     focusInvalid: false,
+    focusInvalid: false,
 
-//     rules: {
-//       name: {
-//         required: true,
-//         minlength: 2
-//       },
-//       email: {
-//         required: true,
-//         email: true
-//       },
-//       message: {
-//         required: true,
-//         minlength: 10
-//       }
-//     },
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      message: {
+        required: true,
+        minlength: 10
+      }
+    },
 
-//     messages: {
-//       name: {
-//         required: 'Please enter your name!',
-//         minlength: jQuery.format('Name requires at least {0} characters!')
-//       },
-//       email: {
-//         required: 'Please enter your email!',
-//         email: 'Please enter a valid email!'
-//       },
-//       message: {
-//         required: 'Please enter a message!',
-//         minlength: jQuery.format('Message requires at least {0} characters!')
-//       }
-//     },
+    messages: {
+      name: {
+        required: 'Please enter your name!',
+        minlength: jQuery.format('Name requires at least {0} characters!')
+      },
+      email: {
+        required: 'Please enter your email!',
+        email: 'Please enter a valid email!'
+      },
+      message: {
+        required: 'Please enter a message!',
+        minlength: jQuery.format('Message requires at least {0} characters!')
+      }
+    },
 
-//     submitHandler: function(form) {
-//       $('#contactform .btn-submit').html('Sending message ...');
-//       $('#commentform .btn-submit').html('Sending comment ...');
-//       $(form).ajaxSubmit({
-//         success: function(responseText, statusText, xhr, $form) {
-//           $(form).delay(1300).slideUp('fast');
-//           $('#response').html(responseText).hide().delay(1300).slideDown('fast');
-//         }
-//       });
-//       return false;
-//     }
+    submitHandler: function(form) {
+      $('#contactform .btn-submit').html('Sending message ...');
+      $('#commentform .btn-submit').html('Sending comment ...');
+      $(form).ajaxSubmit({
+        success: function(responseText, statusText, xhr, $form) {
+          $(form).delay(1300).slideUp('fast');
+          $('#response').html(responseText).hide().delay(1300).slideDown('fast');
+        }
+      });
+      return false;
+    }
 
-//   });
+  });
 
-// });
+});
