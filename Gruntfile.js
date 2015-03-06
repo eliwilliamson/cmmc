@@ -252,19 +252,54 @@ module.exports = function (grunt) {
         }]
       }
     },
-    rev: {
-      options: {
-        length: 4
-      },
+    buildcontrol: {
       dist: {
-        files: {
-          src: [
-            '<%= yeoman.dist %>/scripts/**/*.js',
-            '<%= yeoman.dist %>/styles/**/*.css',
-            '<%= yeoman.dist %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}',
-            '<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
-          ]
+        options: {
+          dir: 'dist',
+          commit: true,
+          push: true,
+          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%',
+          remote: 'git@github.com:eliwilliamson/cmmc.git',
+          branch: 'gh-pages'
         }
+      }
+    },
+    replace: {
+      dist: {
+        options: {
+          patterns: [
+            {
+              match: /(<a[^>]*href="?)(\/)/g,
+              replacement: '$1http://eliwilliamson.github.io/cmmc/'
+            },
+            {
+              match: /(<source[^>]*src="?)(\/)/g,
+              replacement: '$1http://eliwilliamson.github.io/cmmc/'
+            },
+            {
+              match: /(<form[^>]*action="?)(\/)/g,
+              replacement: '$1http://eliwilliamson.github.io/cmmc/'
+            },
+            {
+              match: /("|'?)\/images\//g,
+              replacement: '$1http://eliwilliamson.github.io/cmmc/images/'
+            },
+            {
+              match: /("|'?)\/styles\//g,
+              replacement: '$1http://eliwilliamson.github.io/cmmc/styles/'
+            },
+            {
+              match: /("|'?)\/scripts\//g,
+              replacement: '$1http://eliwilliamson.github.io/cmmc/scripts/'
+            }
+          ]
+        },
+        files: [
+          {
+            expand: true,
+            src: ['dist/**/*.html', 'dist/assets/js/*.js', 'dist/**/*.css']
+          }
+        ]
       }
     },
     jshint: {
@@ -330,9 +365,9 @@ module.exports = function (grunt) {
     'clean:server',
     'jekyll:check',
     'sass:dist',
-    'jshint:all',
-    'csscss:check',
-    'csslint:check'
+    // 'jshint:all',
+    // 'csscss:check',
+    // 'csslint:check'
   ]);
 
   // No real tests yet. Add your own.
@@ -354,9 +389,14 @@ module.exports = function (grunt) {
     'uglify',
     'imagemin',
     'svgmin',
-    'rev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('deployStaging', [
+    'default',
+    'replace',
+    'buildcontrol'
   ]);
 
   grunt.registerTask('default', [

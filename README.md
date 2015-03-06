@@ -24,3 +24,6 @@ Run any test that you have defined for your source.
 
 ##### grunt build
 Build the concatenated, minified production version of the source into the `dist` directory.
+
+##### grunt deployStaging
+Runs `build` and `replace` and then deploy the `dist`-ed version to [github pages](http://eliwilliamson.github.io/cmmc)

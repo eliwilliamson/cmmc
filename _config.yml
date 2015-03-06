@@ -18,13 +18,13 @@ exclude: ['node_modules', 'styles', 'scripts', '**.png', '**.jpg', '**.jpeg', '*
 
 # Force inclusion of directories and/or files in the conversion.
 # .htaccess is a good example since dotfiles are excluded by default.
-include: ['.htaccess']
+include: ['.htaccess', 'cname']
 
 # Default post path style
 # date  /:categories/:year/:month/:day/:title.html
 # pretty  /:categories/:year/:month/:day/:title/
 # none  /:categories/:title.html
-permalink: pretty
+permalink: none
 
 # Publish posts with future date.
 # _config.build.yml sets this to false on `grunt build`
