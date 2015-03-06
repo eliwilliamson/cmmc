@@ -273,6 +273,10 @@ module.exports = function (grunt) {
               replacement: '$1http://eliwilliamson.github.io/cmmc/'
             },
             {
+              match: '\'/favicon.ico\'',
+              replacement: '$1http://eliwilliamson.github.io/cmmc/favicon.ico'
+            },
+            {
               match: /(<source[^>]*src="?)(\/)/g,
               replacement: '$1http://eliwilliamson.github.io/cmmc/'
             },
