@@ -297,7 +297,7 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            src: ['dist/**/*.html', 'dist/assets/js/*.js', 'dist/**/*.css']
+            src: ['dist/**/*.html', 'dist/js/**/*.js', 'dist/scripts/**/*.js', 'dist/**/*.css']
           }
         ]
       }

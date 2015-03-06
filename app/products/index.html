@@ -4,5 +4,14 @@ title: cmmc
 body_class: products
 ---
 
-{% include products-hero.html %}
-<p>hello</p>
+<section id="product">
+  {% include products-hero.html %}
+  <div class="container inner-bottom">
+    <div class="row">
+      <div class="col-sm-12 portfolio">
+        {% include products-filter.html %}
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section>
+{% include shared/cta-bar.html %}
