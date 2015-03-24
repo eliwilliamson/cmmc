@@ -1,17 +1,12 @@
 .homepage {
-  .img-bg-center {
-    background-image: url(/images/landing-hero-bg.jpg);
-    position: relative;
-
-    &:before {
-      background: rgba(#117156, 0.75);
-      content: ' ';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
+  #hero .item:before {
+    background: rgba(#117156, 0.75);
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
 
   #hero .btn-large {

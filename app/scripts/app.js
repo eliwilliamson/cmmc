@@ -135,7 +135,7 @@ $(document).ready(function () {
     pagination: true,
     singleItem: true,
     addClassActive: true,
-        transitionStyle: "fade",
+        transitionStyle: "backSlide",
         navigationText: ["<i class='icon-left-open-mini'></i>", "<i class='icon-right-open-mini'></i>"],
 
       afterInit: function() {
