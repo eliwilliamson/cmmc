@@ -13,9 +13,14 @@
 
   .contact-info {
     color: white;
+
+    &:last-child {
+      display: block;
+    }
   }
 
   .thumbs .thumb .text-overlay {
     background: rgba($green, .9);
+    word-break: break-word;
   }
 }
