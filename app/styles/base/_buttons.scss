@@ -24,7 +24,7 @@ input[type="submit"] {
 
 .btn {
   color: #FFF;
-  background: #9c954a;
+  background: #868835;
   padding: 11px 20px 13px;
   margin: 15px 0;
   font-family: 'Source Sans Pro', sans-serif;
@@ -60,12 +60,12 @@ input[type="submit"] {
 .yamm .nav > li > a.btn,
 .tint-bg .btn {
   &.btn-green {
-    background: #9c954a;
+    background: #868835;
     color: white;
     font-weight: 700;
 
     &:hover, &:focus, &:active, &.active {
-      background: lighten(#9c954a, 10);
+      background: lighten(#868835, 10);
       color: #FFF;
       -webkit-transition: all 200ms ease-out;
       -o-transition: all 200ms ease-out;
@@ -79,7 +79,7 @@ input[type="submit"] {
 
 .tint-bg .btn {
   background: #FFF;
-  color: #9c954a;
+  color: #868835;
   &:hover {
     background: #E9E9E9;
     color: #777777;

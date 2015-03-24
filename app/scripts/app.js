@@ -581,7 +581,7 @@ $(document).ready(function () {
           "elementType": "geometry",
           "stylers": [
               {
-                  "color": "#117156"
+                  "color": "#868835"
               }
           ]
       },
@@ -767,7 +767,7 @@ $(document).ready(function () {
           "elementType": "geometry",
           "stylers": [
               {
-                  "color": "#117156"
+                  "color": "#868835"
               }
           ]
       },

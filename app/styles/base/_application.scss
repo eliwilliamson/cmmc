@@ -25,17 +25,22 @@
 #get-started .btn-green{
   margin-top: 0;
   padding: 12px 24px;
+  background: #117156;
+
+  &:hover, &:focus, &:active, &.active {
+    background: lighten(#117156, 10);
+  }
 }
 
 .footer-bottom {
-  background-color: darken(#117156, 10) !important;
+  background-color: darken(#868835, 10) !important;
 
   p, ul, li, a {
-    color: #117156 !important;
+    color: #868835 !important;
   }
 
   a:hover {
-    color: lighten(#117156, 10) !important;
+    color: lighten(#868835, 10) !important;
   }
 }
 
