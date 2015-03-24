@@ -24,7 +24,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 40px;
+    left: 50px;
     width: 2px;
     margin-left: -1.5px;
     background-color: lighten($light-gray, 7);;
@@ -46,7 +46,7 @@
       float: right;
       position: relative;
       width: 100%;
-      padding: 0 0 20px 100px;
+      padding: 0 0 20px 120px;
       text-align: left;
       &:before {
         right: auto;
@@ -65,8 +65,8 @@
       z-index: 100;
       position: absolute;
       left: 0;
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       margin-left: 0;
       border: 7px solid lighten($light-gray, 2);;
       border-radius: 100%;
@@ -81,7 +81,7 @@
     }
     &.timeline-inverted > .timeline-panel {
       float: right;
-      padding: 0 0 20px 100px;
+      padding: 0 0 20px 120px;
       text-align: left;
       &:before {
         right: auto;
@@ -124,15 +124,15 @@
       min-height: 100px;
       .timeline-panel {
         float: left;
-        padding: 0 20px 20px 0;
+        padding: 0 50px 20px 0;
         width: 41%;
         text-align: right;
       }
       .timeline-image {
         left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-left: -50px;
+        width: 160px;
+        height: 160px;
+        margin-left: -80px;
         h3 {
           margin-top: 16px;
           font-size: 13px;
@@ -141,7 +141,7 @@
       }
       &.timeline-inverted > .timeline-panel {
         float: right;
-        padding: 0 0 20px 20px;
+        padding: 0 0 20px 50px;
         text-align: left;
       }
     }
@@ -152,14 +152,20 @@
   .timeline > li {
     min-height: 150px;
     .timeline-image {
-      width: 150px;
-      height: 150px;
-      margin-left: -75px;
+      width: 230px;
+      height: 230px;
+      margin-left: -115px;
       h3 {
         margin-top: 30px;
         font-size: 18px;
         line-height: 26px;
       }
+    }
+    .timeline-panel {
+      padding: 0 80px 20px 0;
+    }
+    &.timeline-inverted > .timeline-panel {
+      padding: 0 0 20px 80px;
     }
   }
 }
@@ -168,12 +174,18 @@
   .timeline > li {
     min-height: 170px;
     .timeline-image {
-      width: 170px;
-      height: 170px;
-      margin-left: -85px;
+      width: 260px;
+      height: 260px;
+      margin-left: -130px;
       h3 {
         margin-top: 40px;
       }
+    }
+    .timeline-panel {
+      padding: 0 100px 20px 0;
+    }
+    &.timeline-inverted > .timeline-panel {
+      padding: 0 0 20px 100px;
     }
   }
 }
