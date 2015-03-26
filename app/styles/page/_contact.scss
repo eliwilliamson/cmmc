@@ -14,7 +14,8 @@
   .contact-info {
     color: white;
 
-    &:last-child {
+    &:last-child,
+    &.phone {
       display: block;
     }
   }
