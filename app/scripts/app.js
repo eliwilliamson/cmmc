@@ -561,9 +561,7 @@ $(document).ready(function () {
       ['Cincinnati Mine SA (Cincinnati Chain and Supply)', -25.9054739, 29.2304855, 6],
       ['Sumiton Mine Supply', 33.7315537, -87.0396025, 7],
       ['Woodruff Supply Co.', 37.33329, -87.5093969, 8],
-      ['Woodruff Supply Co.', 38.00915730000001, -88.91738199999999, 9],
       ['Parts Service and Supply', 28.5232921, -100.3113873, 10],
-      ['Apex Machine Works, LTD', 46.0901064, -64.8067903, 11],
       ['Bit Service Co. LTD.', 52.16460499999999, -106.6563648, 12],
       ['Bit Service Co. LTD.', 50.6495932, -102.0776302, 13]
     ];
@@ -751,7 +749,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   if ($('body').hasClass('contact')) {
     var locations = [
-      ['Cincinnati Mine Machinery Co.', 39.214526, -84.582801, 1]
+      ['Cincinnati Mine Machinery Co.<br>2950 Jonrose Ave.<br>Cincinnati, Ohio 45239<br>Phone: <a href="tel:+15137284040">513-728-4040</a><br>Fax: <a href="tel:+15137284041">513-728-4041</a><br><strong><a href="https://www.google.com/maps/dir/2950+Jonrose+Ave,+Cincinnati,+OH+45239/@39.214526,-84.5849468,17z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x88404ac035d64521:0x3d7c438b478cd391!2m2!1d-84.582801!2d39.214526">Get Directions</a></strong>', 39.214526, -84.582801, 1]
     ];
 
     var map = new google.maps.Map(document.getElementById('map-contact'), {
@@ -918,6 +916,13 @@ $(document).ready(function () {
         map: map,
         icon: '/images/pin.png'
       });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
     }
   }
 });
