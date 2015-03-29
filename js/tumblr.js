@@ -34,14 +34,11 @@ $(function() {
             var sliderCTA = $('#hidden a').text();
             var sliderBG = $('#hidden img').attr('src');
 
+            console.log(sliderCTA);
+
             var postSlider = $('<div class="item" style="background-image: url(' + sliderBG + ');"><div class="container"><div class="caption vertical-center text-center"><h1 class="fadeInDown-1 light-color">' + post.title + '</h1><p class="fadeInDown-2 light-color">' + sliderBody + '</p><div class="fadeInDown-3"><a href="' + sliderLink + '" class="btn btn-large">' + sliderCTA + '</a></div></div></div></div>')
 
-            postSlider.appendTo('#hero #owl-main')
-
-            sliderBody = null
-            sliderLink = null
-            sliderCTA = null
-            sliderBG = null
+            postSlider.prependTo('#hero #owl-main')
 
         })
     }
