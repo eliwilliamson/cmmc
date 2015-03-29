@@ -10,9 +10,9 @@ $(function() {
             + '&callback=?'
     }
 
-    var key = 'L4g3VBKroP8DvteHKmbBMbwPuBkJKBCdd8jRoVmyLBpc61Elyy'
+    var key = 'YyZzXfjcZm99hAMdsY4GTG3svTkEPrVpzwCaTfvUBLtTFmrSeJ'
 
-    var url = buildURL('studio101ri', key)
+    var url = buildURL('cincinnatiminemachineryco', key)
 
     $(function () {
         $.getJSON(url, function (data) {
@@ -26,17 +26,21 @@ $(function() {
 
         posts.forEach(function (post) {
 
-            var postElement = $('<div class="post"></div>')
-            var postBody = post.body
+            var initElement = $(post.body)
+            initElement.appendTo('#hero #hidden')
 
-            postElement.addClass(post.title)
-            postElement.append(postBody)
-            if (post.title === 'Latest News') {
-              postElement.appendTo('.latestNews')
-            }
-            else if (post.title === 'Current Promotions') {
-              postElement.appendTo('.currentPromotions')
-            }
+            var sliderBody = $('#hidden p:first-child').text();
+            var sliderLink = $('#hidden a').attr('href');
+            var sliderCTA = $('#hidden a').text();
+            var sliderBG = $('#hidden img').attr('src');
+
+            console.log(sliderCTA);
+
+            var postSlider = $('<div class="item" style="background-image: url(' + sliderBG + ');"><div class="container"><div class="caption vertical-center text-center"><h1 class="fadeInDown-1 light-color">' + post.title + '</h1><p class="fadeInDown-2 light-color">' + sliderBody + '</p><div class="fadeInDown-3"><a href="' + sliderLink + '" class="btn btn-large">' + sliderCTA + '</a></div></div></div></div>')
+
+            postSlider.appendTo('#hero #owl-main')
+
+            $('#hero #hidden').empty();
 
         })
     }
