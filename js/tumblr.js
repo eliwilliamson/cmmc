@@ -38,6 +38,11 @@ $(function() {
 
             postSlider.appendTo('#hero #owl-main')
 
+            sliderBody = null
+            sliderLink = null
+            sliderCTA = null
+            sliderBG = null
+
         })
     }
   }
