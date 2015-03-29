@@ -980,18 +980,6 @@ $(document).ready(function() {
         required: 'Please enter a message!',
         minlength: jQuery.format('Message requires at least {0} characters!')
       }
-    },
-
-    submitHandler: function(form) {
-      $('#contactform .btn-submit').html('Sending message ...');
-      $('#commentform .btn-submit').html('Sending comment ...');
-      $(form).ajaxSubmit({
-        success: function(responseText, statusText, xhr, $form) {
-          $(form).delay(1300).slideUp('fast');
-          $('#response').html(responseText).hide().delay(1300).slideDown('fast');
-        }
-      });
-      return false;
     }
 
   });
