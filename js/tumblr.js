@@ -26,9 +26,16 @@ $(function() {
 
         posts.forEach(function (post) {
 
-            var postElement = $('<div class="item" style="background-image: url(http://eliwilliamson.github.io/cmmc/images/landing-hero-bg.jpg);"><div class="container"><div class="caption vertical-center text-center"><h1 class="fadeInDown-1 light-color">' + post.title + '</h1><p class="fadeInDown-2 light-color">' + post.body.find('p:first-child').text() + '</p></div><!-- /.caption --></div><!-- /.container --></div><!-- /.item -->')
+            var initElement = $(post.body)
+            initElement.appendTo('#hidden')
 
-            postElement.appendTo('#hero #owl-main')
+            var sliderBody = $('#hidden p:first-child').text();
+            var sliderCTA = $('#hidden a').attr('href');
+            var sliderBG = $('#hidden img').attr('src');
+
+            var postSlider = $('<div class="item" style="background-image: url(' + sliderBG + ');"><div class="container"><div class="caption vertical-center text-center"><h1 class="fadeInDown-1 light-color">' + post.title + '</h1><p class="fadeInDown-2 light-color">' + sliderBody + '</p><div class="fadeInDown-3"><a href="http://eliwilliamson.github.io/cmmc/products" class="btn btn-large">' + sliderCTA + '</a></div></div></div></div>')
+
+            postSlider.appendTo('#hero #owl-main')
 
         })
     }
