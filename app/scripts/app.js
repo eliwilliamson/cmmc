@@ -569,8 +569,8 @@ $(document).ready(function () {
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 5,
-      center: new google.maps.LatLng(36, -97.5093944),
+      zoom: 4,
+      center: new google.maps.LatLng(42.5, -97.5093944),
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: true,
       scrollwheel: false,
