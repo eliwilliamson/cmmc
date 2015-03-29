@@ -27,8 +27,7 @@ $(function() {
         posts.forEach(function (post) {
 
             var initElement = $(post.body)
-            var instance = 1
-            initElement.appendTo('#hero #hidden' + instance)
+            initElement.appendTo('#hero #hidden')
 
             var sliderBody = $('#hidden p:first-child').text();
             var sliderLink = $('#hidden a').attr('href');
@@ -41,7 +40,7 @@ $(function() {
 
             postSlider.appendTo('#hero #owl-main')
 
-            ++instance
+            $('#hero #hidden').empty();
 
         })
     }
