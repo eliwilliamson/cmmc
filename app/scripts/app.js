@@ -374,7 +374,7 @@ $(document).ready(function () {
       owl.trigger('owl.prev');
     })
 
-  }, 1000);
+  }, 500);
 
 });
 
