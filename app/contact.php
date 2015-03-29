@@ -1,26 +1,26 @@
 <?php
 	// ========== Enter your email address here ========== //
-	$to = "YOUR EMAIL";
-	
+	$to = "eliwilliamson@me.com";
+
 	// Clean up the input values
 	foreach($_POST as $key => $value) {
 		if(ini_get('magic_quotes_gpc'))
 			$_POST[$key] = stripslashes($_POST[$key]);
-		
+
 		$_POST[$key] = htmlspecialchars(strip_tags($_POST[$key]));
 	}
-	
+
 	// Assign the input values to variables for easy reference
 	$name = $_POST["name"];
 	$email = $_POST["email"];
 	$subject = $_POST["subject"];
 	$message = $_POST["message"];
-	
+
 	// Check input values for errors
 	$errors = array();
 	if(strlen($name) < 2) {
 		if(!$name) {
-			$errors[] = "Please enter your name!";
+			$errors[] = "Please enter your name.";
 		} else {
 			$errors[] = "Name requires at least 2 characters!";
 		}
@@ -32,12 +32,12 @@
 	}
 	if(strlen($message) < 10) {
 		if(!$message) {
-			$errors[] = "Please enter a message!";
+			$errors[] = "Please enter your message.";
 		} else {
 			$errors[] = "Message requires at least 10 characters!";
 		}
 	}
-	
+
 	// Output error message(s)
 	if($errors) {
 		$errortext = "";
@@ -47,7 +47,7 @@
 		die("<ul class='errors arrowed'>". $errortext ."</ul>
 			<a href='javascript:history.go(0)' class='btn'><i class='icon-left-1'></i> Back</a>");
 	}
-	
+
 	// Send the email
 	if($subject!=""){
 		$subject = "Contact Form: $subject";
@@ -57,12 +57,12 @@
 	}
 	$message = "$message";
 	$headers = "From: ".$name." <".$email.">" . "\r\n" . "Reply-To: " . $email;
-	
+
 	mail($to, $subject, $message, $headers);
-	
+
 	// Output success message
-	die("<p class='success'>Thank you! – Your message has been successfully sent!</p>");
-	
+	die("<p class='success'>Thank you! – Your message has been successfully sent. We will get back to you shortly!</p>");
+
 	// Check if email is valid
 	function validEmail($email) {
 		$isValid = true;

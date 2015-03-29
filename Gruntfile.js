@@ -26,7 +26,7 @@ module.exports = function (grunt) {
       },
       jekyll: {
         files: [
-          '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown,js}',
+          '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown,js,php}',
           '_config.yml',
           '!./vendor'
         ],
