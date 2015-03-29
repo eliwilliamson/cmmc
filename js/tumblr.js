@@ -10,9 +10,9 @@ $(function() {
             + '&callback=?'
     }
 
-    var key = 'L4g3VBKroP8DvteHKmbBMbwPuBkJKBCdd8jRoVmyLBpc61Elyy'
+    var key = '31pQVmSEtY2RFhrPWj0tZqVThgOaC1AGGZLNXqXb7GgRXCoAXy'
 
-    var url = buildURL('studio101ri', key)
+    var url = buildURL('cincinnatiminemachineryco', key)
 
     $(function () {
         $.getJSON(url, function (data) {
@@ -26,17 +26,9 @@ $(function() {
 
         posts.forEach(function (post) {
 
-            var postElement = $('<div class="post"></div>')
-            var postBody = post.body
+            var postElement = $('<div class="item" style="background-image: url(http://eliwilliamson.github.io/cmmc/images/landing-hero-bg.jpg);"><div class="container"><div class="caption vertical-center text-center"><h1 class="fadeInDown-1 light-color">' + post.title + '</h1><p class="fadeInDown-2 light-color">' + post.body + '</p></div><!-- /.caption --></div><!-- /.container --></div><!-- /.item -->')
 
-            postElement.addClass(post.title)
-            postElement.append(postBody)
-            if (post.title === 'Latest News') {
-              postElement.appendTo('.latestNews')
-            }
-            else if (post.title === 'Current Promotions') {
-              postElement.appendTo('.currentPromotions')
-            }
+            postElement.appendTo('#hero owl-wrapper')
 
         })
     }
