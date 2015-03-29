@@ -27,7 +27,7 @@ $(function() {
         posts.forEach(function (post) {
 
             var initElement = $(post.body)
-            initElement.appendTo('#hidden')
+            initElement.appendTo('#hero #hidden')
 
             var sliderBody = $('#hidden p:first-child').text();
             var sliderLink = $('#hidden a').attr('href');
