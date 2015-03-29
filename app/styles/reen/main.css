@@ -1336,7 +1336,7 @@ aside .thumb figure {
 	display: none;
 }
 .navbar-header {
-    display: none !important;
+  float: none !important;
 	position: relative;
 	background: #F5F7FA;
 	z-index: 0;
