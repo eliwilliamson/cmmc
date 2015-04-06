@@ -1,12 +1,8 @@
 .about {
 
   #hero {
-    background: url('/images/about-hero.jpg') no-repeat center;
-    background-size: cover;
-
-    @include media($medium-screen-up) {
-      background-position: center -120px !important;
-    }
+    background: transparent url('/images/about-hero.jpg') no-repeat center !important;
+    background-size: cover !important;
   }
 
   h1 span {
