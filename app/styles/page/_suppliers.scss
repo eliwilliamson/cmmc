@@ -10,9 +10,18 @@
 
     h1 {
       text-transform: initial;
-      max-width: 600px;
-      text-align: right;
+      max-width: 900px;
+      text-align: center;
       float: right;
+
+      @include media($medium-screen-up) {
+        text-align: right;
+
+        span {
+          display: block;
+        }
+      }
+
     }
   }
 
