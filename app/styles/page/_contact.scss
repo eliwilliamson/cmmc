@@ -32,4 +32,8 @@
       margin-bottom: 40px;
     }
   }
+
+  blockquote:before {
+    display: none;
+  }
 }
