@@ -24,4 +24,12 @@
     background: rgba($green, .9);
     word-break: break-word;
   }
+
+  .team-headline.sidelines {
+    margin-bottom: 20px;
+
+    & + p {
+      margin-bottom: 40px;
+    }
+  }
 }
