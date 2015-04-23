@@ -2853,9 +2853,6 @@ blockquote:before {
 #owl-main.height-md .item {
 	height: 61vh;
 }
-#owl-main.height-lg .item {
-	height: 90vh;
-}
 #owl-main .container {
 	display: table;
 	height: inherit;
@@ -4843,10 +4840,7 @@ input:focus:-ms-input-placeholder {
 	.height-xs,
 	.height-sm,
 	.height-md,
-	.height-lg,
-	#owl-main .item,
-	#owl-main.height-md .item,
-	#owl-main.height-lg .item {
+	.height-lg {
 		height: 88vh;
 	}
 
