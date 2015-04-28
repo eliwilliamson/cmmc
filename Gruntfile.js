@@ -240,6 +240,7 @@ module.exports = function (grunt) {
             // Explicitly add any files your site needs for distribution here
             //'./vendor/jquery/jquery.js',
             'favicon.ico',
+            'CNAME'
             // 'apple-touch*.png'
           ],
           dest: '<%= yeoman.dist %>'
