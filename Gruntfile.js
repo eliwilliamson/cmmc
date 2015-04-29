@@ -271,7 +271,7 @@ module.exports = function (grunt) {
           patterns: [
             {
               match: /(<a[^>]*href="?)(\/)/g,
-              replacement: '$1http://eliwilliamson.github.io/cmmc/'
+              replacement: '$1http://cinmine.com/'
             },
             {
               match: '\'/favicon.ico\'',
@@ -398,7 +398,7 @@ module.exports = function (grunt) {
     'htmlmin'
   ]);
 
-  grunt.registerTask('deployStaging', [
+  grunt.registerTask('deployProduction', [
     'default',
     'replace',
     'buildcontrol'
