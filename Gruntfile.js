@@ -200,19 +200,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    imagemin: {
-      dist: {
-        options: {
-          progressive: true
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.dist %>',
-          src: '**/*.{jpg,jpeg,png}',
-          dest: '<%= yeoman.dist %>'
-        }]
-      }
-    },
     svgmin: {
       dist: {
         files: [{
@@ -392,7 +379,6 @@ module.exports = function (grunt) {
     'concat',
     'cssmin',
     'uglify',
-    'imagemin',
     'svgmin',
     'usemin',
     'htmlmin'
