@@ -6,29 +6,26 @@
 
     <h2>Have a general inquiry?</h2>
 
-    <form id="contactform" class="forms" action="http://formspree.io/salescinmine@gmail.com" method="post">
-
-      <input type="hidden" name="_next" value="/thanks" />
-      <input type="text" name="_gotcha" style="display:none" />
-
+    <form id="contact" class="forms" action="/thanks" netlify netlify-honeypot="bot-field">
+      <input type="hidden" name="bot-field">
       <div class="row">
         <div class="col-sm-6">
           <input type="text" name="name" class="form-control" placeholder="Name (Required)">
         </div><!-- /.col -->
         <div class="col-sm-6">
-          <input type="email" name="_replyto" class="form-control" placeholder="Email (Required)">
+          <input type="email" name="email" class="form-control" placeholder="Email (Required)">
         </div><!-- /.col -->
       </div><!-- /.row -->
 
       <div class="row">
         <div class="col-sm-12">
-          <input type="text" name="_subject" class="form-control" placeholder="Subject">
+          <input type="text" name="subject" class="form-control" placeholder="Subject">
         </div><!-- /.col -->
       </div><!-- /.row -->
 
       <div class="row">
         <div class="col-sm-12">
-          <textarea name="body" class="form-control" placeholder="Enter your message ..."></textarea>
+          <textarea name="message" class="form-control" placeholder="Enter your message ..."></textarea>
         </div><!-- /.col -->
       </div><!-- /.row -->
 
