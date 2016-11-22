@@ -252,48 +252,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    replace: {
-      dist: {
-        options: {
-          patterns: [
-            {
-              match: /(<a[^>]*href="?)(\/)/g,
-              replacement: '$1http://cinmine.com/'
-            },
-            {
-              match: '\'/favicon.ico\'',
-              replacement: '$1http://eliwilliamson.github.io/cmmc/favicon.ico'
-            },
-            {
-              match: /(<source[^>]*src="?)(\/)/g,
-              replacement: '$1http://eliwilliamson.github.io/cmmc/'
-            },
-            {
-              match: /(<form[^>]*action="?)(\/)/g,
-              replacement: '$1http://eliwilliamson.github.io/cmmc/'
-            },
-            {
-              match: /("|'?)\/images\//g,
-              replacement: '$1http://eliwilliamson.github.io/cmmc/images/'
-            },
-            {
-              match: /("|'?)\/styles\//g,
-              replacement: '$1http://eliwilliamson.github.io/cmmc/styles/'
-            },
-            {
-              match: /("|'?)\/scripts\//g,
-              replacement: '$1http://eliwilliamson.github.io/cmmc/scripts/'
-            }
-          ]
-        },
-        files: [
-          {
-            expand: true,
-            src: ['dist/**/*.html', 'dist/js/**/*.js', 'dist/scripts/**/*.js', 'dist/**/*.css']
-          }
-        ]
-      }
-    },
     jshint: {
       options: {
         jshintrc: '.jshintrc'
@@ -386,7 +344,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('deployProduction', [
     'default',
-    'replace',
     'buildcontrol'
   ]);
 
