@@ -200,19 +200,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    imagemin: {
-      dist: {
-        options: {
-          progressive: true
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.dist %>',
-          src: '**/*.{jpg,jpeg,png}',
-          dest: '<%= yeoman.dist %>'
-        }]
-      }
-    },
     svgmin: {
       dist: {
         files: [{
@@ -263,48 +250,6 @@ module.exports = function (grunt) {
           remote: 'git@github.com:eliwilliamson/cmmc.git',
           branch: 'gh-pages'
         }
-      }
-    },
-    replace: {
-      dist: {
-        options: {
-          patterns: [
-            {
-              match: /(<a[^>]*href="?)(\/)/g,
-              replacement: '$1http://cinmine.com/'
-            },
-            {
-              match: '\'/favicon.ico\'',
-              replacement: '$1http://eliwilliamson.github.io/cmmc/favicon.ico'
-            },
-            {
-              match: /(<source[^>]*src="?)(\/)/g,
-              replacement: '$1http://eliwilliamson.github.io/cmmc/'
-            },
-            {
-              match: /(<form[^>]*action="?)(\/)/g,
-              replacement: '$1http://eliwilliamson.github.io/cmmc/'
-            },
-            {
-              match: /("|'?)\/images\//g,
-              replacement: '$1http://eliwilliamson.github.io/cmmc/images/'
-            },
-            {
-              match: /("|'?)\/styles\//g,
-              replacement: '$1http://eliwilliamson.github.io/cmmc/styles/'
-            },
-            {
-              match: /("|'?)\/scripts\//g,
-              replacement: '$1http://eliwilliamson.github.io/cmmc/scripts/'
-            }
-          ]
-        },
-        files: [
-          {
-            expand: true,
-            src: ['dist/**/*.html', 'dist/js/**/*.js', 'dist/scripts/**/*.js', 'dist/**/*.css']
-          }
-        ]
       }
     },
     jshint: {
@@ -392,7 +337,6 @@ module.exports = function (grunt) {
     'concat',
     'cssmin',
     'uglify',
-    'imagemin',
     'svgmin',
     'usemin',
     'htmlmin'
@@ -400,7 +344,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('deployProduction', [
     'default',
-    'replace',
     'buildcontrol'
   ]);
 
