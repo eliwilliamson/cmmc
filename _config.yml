@@ -5,8 +5,8 @@
 
 # Use _config.build.yml to override these settings on `grunt build`.
 
-name: cmmc
-description: cmmc.
+title: Cincinnati Mine Machinery Co.
+description: Cincinnati Mine Machinery Company is a leading designer and manufacturer of innovative mine machinery equipment.
 
 author:
   name: Eli Williamson
